@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mirror Fashion</title>
+    </head>
+    <body>
+        <h1>
+            Mirror Fashion
+        </h1>
+
+        <h2>
+            Sobre a <strong><em>Mirror Fashion</em></strong>
+        </h2>
+
+        <strong> Bem-vindo a <em>Mirror Fashion</em>, o maior site de vendas do Brasil </strong>
+        
+        <p>
+        O comercio eletronico <strong> Mirror Fashion</strong> nasceu da necessidade da venda de forma prática e rápida de diversos produtos.
+        </p>
+        
+        <p>
+        Na nossa loja, possuem diversas ofertadas para atender todos os públicos e estilos. Os últimos lançamentos de calçados e relógios estão aqui! Aproveite!
+        </p>
+
+        <p>
+            Disponibilizamos de amplo espaço, com diversos setores e estacionamento. a visão panorâmica da sua loja <strong><em>Mirror Fashion</em></strong> e apresentada abaixo:
+        </p>
+        
+        <figcaption>
+            <img src="/img/DepartmentStore.jpg " alt="Visão panorâmica da Mirror Fashion">
+            <figcaption>Visão panorâmica da <strong><em>Mirror Fashion</em></strong></figcaption>
+
+        </figcaption>
+        
+    </body>
+</html>
