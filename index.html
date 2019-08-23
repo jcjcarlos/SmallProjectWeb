@@ -7,8 +7,8 @@
         <link rel="stylesheet" href="css/estilos.css">
     </head>
 
-    <body>
-        <header class="container">
+    <body> <!-- Body dividido em cabeçalho (header), principal (<div id="main") e rodape (footer) -->
+        <header class="container"> <!-- O cabeçalho se repete em todas as páginas -->
             <h1><img src="img/logo.png" alt="Logo da Mirror Fashion"></h1> 
             <!-- A logo foi colocada dentro da tag "h1" por causa de seu significado semântico, um buscador, como o google
             deve associar a logo com o nome da empresa, desta forma foi colocada dentro da tag "h1" -->
@@ -24,11 +24,40 @@
             </nav>
         </header>
 
-        <div id="main">
+        <div id="main"> <!-- O contéudo da <div id="main"> varia conforme a página -->
+            <div class="container destaque">
+                <section class="busca">
+                    <h2>Buscar</h2>
+                    <form>
+                        <input type="search">
+                        <button>Buscar</button>
+                    </form>
+                </section>
 
+                <section class="menu-departamento">
+                    <h2>Departamentos</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Blusas e Calças</a></li>
+                            <li><a href="#">Calças</a></li>
+                            <li><a href="#">Saias</a></li>
+                            <li><a href="#">Vestidos</a></li>
+                            <li><a href="#">Sapatos</a></li>
+                            <li><a href="#">Bolsas e Carteiras</a></li>
+                            <li><a href="#">Acessórios</a></li>
+                        </ul>
+                    </nav>
+                </section>
+
+                <section class="banner-destaque">
+                    <figure>
+                        <img src="img/destaque-home.png" alt="Promoção: Big City Night">
+                    </figure>
+                </section>
+            </div>
         </div>
 
-        <footer>
+        <footer> <!-- A página index.html possui o footer diferente-->
 
         </footer>
     </body>
