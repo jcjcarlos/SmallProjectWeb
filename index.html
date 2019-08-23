@@ -2,18 +2,25 @@
     <head>
         <title>Mirror Fashion</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/reset.css"> <!-- O CSS Reset deve ser inserido antes
-        porque o navegador lê as tags de cima para baixo, da esquerda para direita -->
+        <link rel="stylesheet" href="css/reset.css"> <!--O CSS Reset deve ser inserido antes
+        porque o navegador lê as tags de cima para baixo, da esquerda para direita-->
         <link rel="stylesheet" href="css/estilos.css">
     </head>
 
-    <body> <!-- Body dividido em cabeçalho (header), principal (<div id="main") e rodape (footer) -->
-        <header class="container"> <!-- O cabeçalho se repete em todas as páginas -->
+    <!--Inicio do Body-->
+    <body> 
+        <!--Body dividido em cabeçalho (header), principal (<div id="main") e rodape (footer)-->
+
+        <!--Inicio do Header-->
+        <header class="container"> <!--O cabeçalho se repete em todas as páginas-->
             <h1><img src="img/logo.png" alt="Logo da Mirror Fashion"></h1> 
-            <!-- A logo foi colocada dentro da tag "h1" por causa de seu significado semântico, um buscador, como o google
-            deve associar a logo com o nome da empresa, desta forma foi colocada dentro da tag "h1" -->
+                <!--A logo foi colocada dentro da tag "h1" por causa de seu significado semântico, um buscador, como o google
+                deve associar a logo com o nome da empresa, a logo foi colocada dentro da tag "h1"-->
             <p class="sacola">Nenhum item na sacola de compras</p>
-            <nav class="menu-opcoes"> <!-- Como a lista será horizontal, foi realizada uma marcaçao indicando navegação "nav" -->
+
+            <!--Inicio do Menu de Opções (<nav class="menu-opcoes")-->
+            <nav class="menu-opcoes"> 
+                <!--Como a lista será horizontal, foi realizada uma marcaçao indicando navegação "nav"-->
                 <ul>
                     <li><a href="#">Sua Conta</a></li>
                     <li><a href="#">Lista de desejos</a></li>
@@ -22,18 +29,33 @@
                     <li><a href="#">Ajuda</a></li>
                 </ul>
             </nav>
-        </header>
+            <!--Fim do Menu de Opções (<nav class="menu-opcoes")-->
 
-        <div id="main"> <!-- O contéudo da <div id="main"> varia conforme a página -->
-            <div class="container destaque">
-                <section class="busca">
+        </header>
+        <!--Fim do Header-->
+
+        <!--Inicio do conteúdo principal do Body-->
+        <div id="main"> 
+            <!--O contéudo da <div id="main"> varia conforme a página. A <div id="main", no index.html possui 
+            duas divisões principais: <div class="container destaque"> e <div class="container promocoes">-->
+
+            <!--Inicio da divisão de destaques (<div class="container destaques")-->
+            <div class="container destaque"> 
+                <!--A <div class="container destaque" inclui o campo de busca 
+                (<section class="busca"), o menu de departamentos (<section class="menu-departamento") e o banner de destaque
+                (<section class="banner-destaque")-->
+                
+                <!--Campo de busca (<section class="busca">)-->
+                <section class="busca"> 
                     <h2>Buscar</h2>
                     <form>
                         <input type="search">
                         <button>Buscar</button>
                     </form>
                 </section>
+                <!--Fim do campo de busca (<section class="busca">)-->
 
+                <!--Início do Menu de departamentos (<section class="menu-departamento")-->
                 <section class="menu-departamento">
                     <h2>Departamentos</h2>
                     <nav>
@@ -48,17 +70,25 @@
                         </ul>
                     </nav>
                 </section>
-
+                <!--Fim do Menu de departamentos (<section class="menu-departamento")-->
+                
+                <!--Início do Banner de destaque (<section class="banner-destaqque")-->
                 <section class="banner-destaque">
                     <figure>
                         <img src="img/destaque-home.png" alt="Promoção: Big City Night">
                     </figure>
                 </section>
-            </div>
-        </div>
+                <!--Fim do Banner de destaque (<section class="banner-destaqque")-->
 
-        <footer> <!-- A página index.html possui o footer diferente-->
+            </div> 
+            <!--Fim da divisão de destaques (<div class="container destaques")-->
+        </div>
+        <!--Fim do conteúdo principal do Body-->
+
+        <footer> 
+            <!--A página index.html possui o footer diferente-->
 
         </footer>
     </body>
+    <!--Fim do Body-->
 </html>
