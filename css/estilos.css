@@ -3,7 +3,13 @@ body{ /* Define a cor do texto e a fonte padrão de todo o "body" */
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif
 }
 
-.sacola { /* class="sacola" */
+header{
+    position: relative; /* A tag "header" sera a tag pai da class="menu-opcoes". O alinhamento da classe 
+    ="menu-opcoes" sera no canto inferior-direito desta tag "header". A tag-pai ("header") é marcada
+    como um retãngulo, e o conteúdo (textos ou tags filhas) podem se "mover" dentro desta marcação */
+}
+
+.sacola { /* class="sacola" inclui o texto "Nenhum item na sacola de compras" e o ícone de sacola */
     
     /* A background-image da sacola ocupa toda a extensão horizontal do body, com imagens repetidas.
     Definimos "background-repeat: no-repeat" para que somente tenha uma unica imagem no paragrafo com class="sacola"
@@ -27,6 +33,17 @@ body{ /* Define a cor do texto e a fonte padrão de todo o "body" */
     padding-top: 8px; /* O texto "Nenhum item na sacola de compras" estava um pouco acima do ícone de sacolas sendo 
     utilizado um pequeno espaçamento interno (padding-top = dentro das bordas do elemento) de 8px, entre o elemento pai 
     (class="sacola") e o texto "Nenhum item na sacola de compras". */
+
+    position: absolute; /* Alinhamento da class="sacola" em relação a tag-pai "header" */
+    top: 0; /*Canto superior*/
+    right: 0; /*Canto direito*/
+}
+
+.menu-opcoes{ /*todo o conteudo da class="menu-opcoes" será alinhado a partir da tag-pai "header
+    O Alinhameto será "colada" no canto inferior-direito da tag "header" */
+    position: absolute; /*  Alinhamento em relação a tag-pai "header" (absolute) */
+    bottom: 0;/* Canto inferior */
+    right: 0; /* Canto direito */
 }
 
 .menu-opcoes ul li{ /* Seletor hierárquico, aplica somente nas tags filhas no qual a tag pai possui class="menu-opcoes".
