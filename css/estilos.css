@@ -4,15 +4,22 @@ body{ /* Define a cor do texto e a fonte padrão de todo o "body" */
 }
 
 header{
-    position: relative; /* A tag "header" sera a tag pai da class="menu-opcoes". O alinhamento da classe 
-    ="menu-opcoes" sera no canto inferior-direito desta tag "header". A tag-pai ("header") é marcada
+    position: relative; /* A tag "header" sera a tag pai da class="menu-opcoes". O alinhamento da (classe 
+    ="menu-opcoes"), uma tag-filha, será no canto inferior-direito desta tag "header". A tag-pai ("header") é marcada
     como um retãngulo, e o conteúdo (textos ou tags filhas) podem se "mover" dentro desta marcação */
 }
 
+.container{ /* Todas as tags que herdam esta classe ficaram centralizadas na página do navegador, com largura=940px; */
+    margin: 0 auto; /* auto: o próprio navegador coloca a margem com base no espaço disponível na tela, mesmo quando
+    o usuário utlizar "zoom" no navegador*/
+    width: 940px;/* Largura das marcações que herdam esta classe */
+}
+
+/* Inicio das configurações CSS da tag <p class="sacola"> (O ícone da sacola junto ao texto*/
 .sacola { /* class="sacola" inclui o texto "Nenhum item na sacola de compras" e o ícone de sacola */
     
     /* A background-image da sacola ocupa toda a extensão horizontal do body, com imagens repetidas.
-    Definimos "background-repeat: no-repeat" para que somente tenha uma unica imagem no paragrafo com class="sacola"
+    Definimos "background-repeat: no-repeat" para que somente tenha uma unica imagem no paragrafo (<p class="sacola">)
     Por padrão, a imagem é alinhada a esquerda (left), colocamos então a direita (right) e ao topo (top)  */
     
     background-image: url(../img/sacola.png) ;
@@ -27,8 +34,8 @@ header{
     
     width: 140px; /* A propriedade "width" é aplicada ao texto contendo 140px, como a propriedade "padding" possui
     35px, aparece 175px no browser (140px + 35px). Mantém o texto alinhado, sendo o texto "Nenhum item na sacola de
-    compras" apresentado em duas linhas. Também sem essa propriedade, o ícone da sacola fica "cortado", provavelmente
-    porque, ao deixar o texto com duas linhas, da espaço para que a figura aparece inteira */
+    compras" apresentado em duas linhas. Sem essa propriedade, o ícone da sacola fica "cortado", provavelmente
+    porque, ao deixar o texto com duas linhas, "sobra" espaço para que a figura aparece inteira */
     
     padding-top: 8px; /* O texto "Nenhum item na sacola de compras" estava um pouco acima do ícone de sacolas sendo 
     utilizado um pequeno espaçamento interno (padding-top = dentro das bordas do elemento) de 8px, entre o elemento pai 
@@ -38,7 +45,9 @@ header{
     top: 0; /*Canto superior*/
     right: 0; /*Canto direito*/
 }
+/* Fim das configurações CSS da tag <p class="sacola"> */
 
+/* Inicio das configurações CSS da tag <nav class="menu-opcoes"> */
 .menu-opcoes{ /*todo o conteudo da class="menu-opcoes" será alinhado a partir da tag-pai "header
     O Alinhameto será "colada" no canto inferior-direito da tag "header" */
     position: absolute; /*  Alinhamento em relação a tag-pai "header" (absolute) */
@@ -47,7 +56,9 @@ header{
 }
 
 .menu-opcoes ul li{ /* Seletor hierárquico, aplica somente nas tags filhas no qual a tag pai possui class="menu-opcoes".
-    Nesse caso especifico, se refere a <nav class="menu-opcoes"> <ul ... */
+    Nesse caso especifico, se refere a <nav class="menu-opcoes"> <ul> <li> ... 
+    OBS: O Seletor hierarquico somente será aplicado nas tag <li> contidas em uma tag <ul> que possui como pai uma marcação
+    que contém a (class="menu-opcoes"). Neste exemplo, será aplicada a <nav class="menu-opcoes"><ul><li>Conteudo ...</li> etc.*/
     font-size: 15px;
     display: inline; /* Esta propriedade possui duas opções 
     Block: O elemento ocupa toda a linha do html como "<h1>-<h6>", "<div>" "<p>" 
@@ -58,8 +69,24 @@ header{
     Nesse caso especifico, se refere a <nav class="menu-opcoes"> <ul> <li> <a href=...></a> */
     color: #036;
 }
+/* Fim das configurações CSS da tag <nav class="menu-opcoes"> */
 
-.container{
-    margin: 0 auto;
-    width: 940px;
+/* Inicio das configurações CSS da tag <section class="buscar"> */
+
+.busca, .menu-departamento{ /* Nesta forma de configuração, tanto a classe busca, quanto a classe menu-departamento sofrem as
+    alterações inseridas. A enumeração é feita através de "virgulas" (,)*/
+    background-color: #dcdcdc; /* Cor de fundo das sections <section class="buscar" e section class="Conteudo" são iguais */
+    font-weight: bold;
+    text-transform: uppercase;
+
+    margin-right: 10px;
+    width: 230px; /* Garante que as "sections" <section class="buscar"> e <section class="menu-departamento">
+     terão os mesmos tamanhos */
 }
+/* Fim das configurações CSS da tag <section class="buscar"> */
+
+.busca h2, .busca form, .menu-departamento h2{
+    margin: 10px; /* Insere um espaço entre os "headings2 (h2)" das sections <section class="buscar"> e <section class="
+    menu-departament" e seus respectivos conteúdos. */
+}
+
