@@ -48,7 +48,7 @@ header{
 /* Fim das configurações CSS da tag <p class="sacola"> */
 
 /* Inicio das configurações CSS da tag <nav class="menu-opcoes"> */
-.menu-opcoes{ /*todo o conteudo da class="menu-opcoes" será alinhado a partir da tag-pai "header
+.menu-opcoes{ /*todo o conteudo da class="menu-opcoes" será alinhado a partir da tag-pai <header>
     O Alinhameto será "colada" no canto inferior-direito da tag "header" */
     position: absolute; /*  Alinhamento em relação a tag-pai "header" (absolute) */
     bottom: 0;/* Canto inferior */
@@ -71,9 +71,15 @@ header{
 }
 /* Fim das configurações CSS da tag <nav class="menu-opcoes"> */
 
-/* Inicio das configurações CSS da tag <section class="buscar"> */
+/* Inicio das configurações CSS da tag <section class="buscar"> e <section class="menu-departamento>*/
 
-.busca, .menu-departamento{ /* Nesta forma de configuração, tanto a classe busca, quanto a classe menu-departamento sofrem as
+.destaque {
+    margin-top: 10px; /* Separa a <div class="container destaque" da tag <header>. Essa marcação
+    <div class="container destaque"> contém como tags-filhas as seções <section class="busca">
+    e <section class="menu-departamento" */
+}
+
+.busca, .menu-departamento{ /* Nesta forma de configuração, tanto a classe busca, quanto a classe (.menu-departamento) sofrem as
     alterações inseridas. A enumeração é feita através de "virgulas" (,)*/
     background-color: #dcdcdc; /* Cor de fundo das sections <section class="buscar" e section class="Conteudo" são iguais */
     font-weight: bold;
@@ -82,11 +88,80 @@ header{
     margin-right: 10px;
     width: 230px; /* Garante que as "sections" <section class="buscar"> e <section class="menu-departamento">
      terão os mesmos tamanhos */
+
+    float: left; /* O Float (flutuar) retira o elemento do Fluxo do Documento, de forma que os mesmos (.busca e 
+    .menu-departamento) fiquem a esquerda enquanto a imagem oucupa o lugar. Porém a classe (.menu-departamento)
+    não deve ter nenhum elemento flutuando a sua esquerda, assim ela ficará abaixo deste elemento, pois aparece depois
+    na ordem de marcações HTML, (na página index.html) */
+    
 }
-/* Fim das configurações CSS da tag <section class="buscar"> */
+
+.menu-departamento{
+    clear: left; /* Garante que a classe (.menu-departamento) não terá nenhum elemento flutuando a sua esquerda, ocupando
+    o espaço abaixo logo em seguida a classe (.buscar), que também está flutuando. A propriedade "clear" só funciona
+    junto a elementos que estão flutuando em relação a outro elemento flutuante*/
+
+    margin-top: 10px; /* Esta margem cria um afastamento visível entre as tags <section class="busca"> e
+    <section class="menu-departamento". Como ambas possui a mesma cor de fundo, aparentemente pertenciam a mesma classe,
+    (O titulo <h2>BUSCAR</h2>, o campo de busca <input type="search"> e o titulo <h2>DEPARTAMENTOS</h2> estavam colados) */
+    padding-bottom: 10px; /* Esse avastamento permite visualizar a cor de fundo cinza (#333333) após o último ListIten
+    (<li>) da Tag <section class="menu-departamento"><ul><li>...</li></ul></section>, que estava coberto pois todas as 
+    <li> desta classe possuem "background-color: white" */
+}
 
 .busca h2, .busca form, .menu-departamento h2{
     margin: 10px; /* Insere um espaço entre os "headings2 (h2)" das sections <section class="buscar"> e <section class="
     menu-departament" e seus respectivos conteúdos. */
+    /* Seletores hierárquicos de classes podem ser enumerados em uma mesma configuração */
 }
+
+.menu-departamento li {
+    background-color: white; /* A configuração "background-color", nos seletores de classes ".busca, .menu-departamento{...}"
+    Coloca tanto a classe, como seus elementos filhos com fundo cinza. Como a lista de departamentos <li></li> possui uma cor 
+    de fundo diferente do <h2>DEPARTAMENTOS</h2>, esta propriedade é setada apenas nos itens de lista desta classe  */
+    margin-bottom: 1px; /* Insere uma linha entre os itens do (.menu-departamento li), definindo sua espessura */
+    padding: 5px 10px; /* Adiciona um espaço vertical entre os itens de departamentos, e alinha os mesmos horizontalmente
+    com o <h2>DEPARTAMENTOS</h2> */
+}
+
+.menu-departamento a{
+    color: #333333; /* Coloca os links do (.menu-departamento a) em cinza padrão */
+    text-decoration: none; /* Remove os sublinhados dos links */
+}
+
+.busca input[type=search]{
+    width: 170px; /* Diminui o tamanho do campo de entrada de dados do formulário buscar, para que o botão fique na mesma linha */
+}
+
+.painel {
+    width: 445px; /* Cada painel terá 445px, sendo esta característica herdada pelos paneis
+    de novidades e dos mais vendidos*/
+    margin: 10px 0; /* Separa os paineis dos destaques e do rodapé
+    padding: 10px;
+}
+
+.painel li{
+    display: inline-block;
+    vertical-align: top;
+    width: 140px; /* Garante que o tamanho da imagem será do ListItem <li>, mesmo que o texto
+    ultrapasse o tamanho, quebrando o Layout */
+    
+}
+
+.painel a{
+    text-decoration: none;
+    color: #333333;
+    text-align: center;
+}
+
+.novidades{
+    float: left;
+}
+
+.mais-vendidos{
+    float: right;
+}
+
+
+
 
