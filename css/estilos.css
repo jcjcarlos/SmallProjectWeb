@@ -1,167 +1,260 @@
-body{ /* Define a cor do texto e a fonte padrão de todo o "body" */
+body {
+    /* Define a cor do texto e a fonte padrão de todo o "body" */
     color: #333333;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 }
 
-header{
-    position: relative; /* A tag "header" sera a tag pai da class="menu-opcoes". O alinhamento da (classe 
+header {
+    position: relative;
+    /* A tag "header" sera a tag pai da class="menu-opcoes". O alinhamento da (classe 
     ="menu-opcoes"), uma tag-filha, será no canto inferior-direito desta tag "header". A tag-pai ("header") é marcada
     como um retãngulo, e o conteúdo (textos ou tags filhas) podem se "mover" dentro desta marcação */
 }
 
-.container{ /* Todas as tags que herdam esta classe ficaram centralizadas na página do navegador, com largura=940px; */
-    margin: 0 auto; /* auto: o próprio navegador coloca a margem com base no espaço disponível na tela, mesmo quando
+.container {
+    /* Todas as tags que herdam esta classe ficaram centralizadas na página do navegador, com largura=940px; */
+    margin: 0 auto;
+    /* auto: o próprio navegador coloca a margem com base no espaço disponível na tela, mesmo quando
     o usuário utlizar "zoom" no navegador*/
-    width: 940px;/* Largura das marcações que herdam esta classe */
+    width: 940px;
+    /* Largura das marcações que herdam esta classe */
 }
 
+
 /* Inicio das configurações CSS da tag <p class="sacola"> (O ícone da sacola junto ao texto*/
-.sacola { /* class="sacola" inclui o texto "Nenhum item na sacola de compras" e o ícone de sacola */
-    
+
+.sacola {
+    /* class="sacola" inclui o texto "Nenhum item na sacola de compras" e o ícone de sacola */
     /* A background-image da sacola ocupa toda a extensão horizontal do body, com imagens repetidas.
     Definimos "background-repeat: no-repeat" para que somente tenha uma unica imagem no paragrafo (<p class="sacola">)
     Por padrão, a imagem é alinhada a esquerda (left), colocamos então a direita (right) e ao topo (top)  */
-    
-    background-image: url(../img/sacola.png) ;
+    background-image: url(../img/sacola.png);
     background-repeat: no-repeat;
     background-position: top right;
     font-size: 14px;
-    
-    padding-right: 35px; /* Caso não seja colocado este espaçamento, o texto "Nenhum item na sacola de compras"
+    padding-right: 35px;
+    /* Caso não seja colocado este espaçamento, o texto "Nenhum item na sacola de compras"
     ficará na frente do ícone de sacola */
-    
-    text-align: right; /* O texto, por padrão é alinhado na margem esquerda (left), sendo colocado na direita (right) */
-    
-    width: 140px; /* A propriedade "width" é aplicada ao texto contendo 140px, como a propriedade "padding" possui
+    text-align: right;
+    /* O texto, por padrão é alinhado na margem esquerda (left), sendo colocado na direita (right) */
+    width: 140px;
+    /* A propriedade "width" é aplicada ao texto contendo 140px, como a propriedade "padding" possui
     35px, aparece 175px no browser (140px + 35px). Mantém o texto alinhado, sendo o texto "Nenhum item na sacola de
     compras" apresentado em duas linhas. Sem essa propriedade, o ícone da sacola fica "cortado", provavelmente
     porque, ao deixar o texto com duas linhas, "sobra" espaço para que a figura aparece inteira */
-    
-    padding-top: 8px; /* O texto "Nenhum item na sacola de compras" estava um pouco acima do ícone de sacolas sendo 
+    padding-top: 8px;
+    /* O texto "Nenhum item na sacola de compras" estava um pouco acima do ícone de sacolas sendo 
     utilizado um pequeno espaçamento interno (padding-top = dentro das bordas do elemento) de 8px, entre o elemento pai 
     (class="sacola") e o texto "Nenhum item na sacola de compras". */
-
-    position: absolute; /* Alinhamento da class="sacola" em relação a tag-pai "header" */
-    top: 0; /*Canto superior*/
-    right: 0; /*Canto direito*/
+    position: absolute;
+    /* Alinhamento da class="sacola" em relação a tag-pai "header" */
+    top: 0;
+    /*Canto superior*/
+    right: 0;
+    /*Canto direito*/
 }
+
+
 /* Fim das configurações CSS da tag <p class="sacola"> */
 
+
 /* Inicio das configurações CSS da tag <nav class="menu-opcoes"> */
-.menu-opcoes{ /*todo o conteudo da class="menu-opcoes" será alinhado a partir da tag-pai <header>
+
+.menu-opcoes {
+    /*todo o conteudo da class="menu-opcoes" será alinhado a partir da tag-pai <header>
     O Alinhameto será "colada" no canto inferior-direito da tag "header" */
-    position: absolute; /*  Alinhamento em relação a tag-pai "header" (absolute) */
-    bottom: 0;/* Canto inferior */
-    right: 0; /* Canto direito */
+    position: absolute;
+    /*  Alinhamento em relação a tag-pai "header" (absolute) */
+    bottom: 0;
+    /* Canto inferior */
+    right: 0;
+    /* Canto direito */
 }
 
-.menu-opcoes ul li{ /* Seletor hierárquico, aplica somente nas tags filhas no qual a tag pai possui class="menu-opcoes".
+.menu-opcoes ul li {
+    /* Seletor hierárquico, aplica somente nas tags filhas no qual a tag pai possui class="menu-opcoes".
     Nesse caso especifico, se refere a <nav class="menu-opcoes"> <ul> <li> ... 
     OBS: O Seletor hierarquico somente será aplicado nas tag <li> contidas em uma tag <ul> que possui como pai uma marcação
     que contém a (class="menu-opcoes"). Neste exemplo, será aplicada a <nav class="menu-opcoes"><ul><li>Conteudo ...</li> etc.*/
     font-size: 15px;
-    display: inline; /* Esta propriedade possui duas opções 
+    display: inline;
+    /* Esta propriedade possui duas opções 
     Block: O elemento ocupa toda a linha do html como "<h1>-<h6>", "<div>" "<p>" 
     Inline: O elemento aceita outros elementos na mesma linha, como "<strong>" "<em>", etc.*/
 }
 
-.menu-opcoes a{ /* Aplica tais propriedades nas tags filhas "anchor" (ancora), que redireciona para o link de outra pagina 
+.menu-opcoes a {
+    /* Aplica tais propriedades nas tags filhas "anchor" (ancora), que redireciona para o link de outra pagina 
     Nesse caso especifico, se refere a <nav class="menu-opcoes"> <ul> <li> <a href=...></a> */
     color: #036;
 }
+
+
 /* Fim das configurações CSS da tag <nav class="menu-opcoes"> */
+
 
 /* Inicio das configurações CSS da tag <section class="buscar"> e <section class="menu-departamento>*/
 
 .destaque {
-    margin-top: 10px; /* Separa a <div class="container destaque" da tag <header>. Essa marcação
+    margin-top: 10px;
+    /* Separa a <div class="container destaque" da tag <header>. Essa marcação
     <div class="container destaque"> contém como tags-filhas as seções <section class="busca">
     e <section class="menu-departamento" */
 }
 
-.busca, .menu-departamento{ /* Nesta forma de configuração, tanto a classe busca, quanto a classe (.menu-departamento) sofrem as
+.busca,
+.menu-departamento {
+    /* Nesta forma de configuração, tanto a classe busca, quanto a classe (.menu-departamento) sofrem as
     alterações inseridas. A enumeração é feita através de "virgulas" (,)*/
-    background-color: #dcdcdc; /* Cor de fundo das sections <section class="buscar" e section class="Conteudo" são iguais */
+    background-color: #dcdcdc;
+    /* Cor de fundo das sections <section class="buscar" e section class="Conteudo" são iguais */
     font-weight: bold;
     text-transform: uppercase;
-
     margin-right: 10px;
-    width: 230px; /* Garante que as "sections" <section class="buscar"> e <section class="menu-departamento">
+    width: 230px;
+    /* Garante que as "sections" <section class="buscar"> e <section class="menu-departamento">
      terão os mesmos tamanhos */
-
-    float: left; /* O Float (flutuar) retira o elemento do Fluxo do Documento, de forma que os mesmos (.busca e 
+    float: left;
+    /* O Float (flutuar) retira o elemento do Fluxo do Documento, de forma que os mesmos (.busca e 
     .menu-departamento) fiquem a esquerda enquanto a imagem oucupa o lugar. Porém a classe (.menu-departamento)
     não deve ter nenhum elemento flutuando a sua esquerda, assim ela ficará abaixo deste elemento, pois aparece depois
     na ordem de marcações HTML, (na página index.html) */
-    
 }
 
-.menu-departamento{
-    clear: left; /* Garante que a classe (.menu-departamento) não terá nenhum elemento flutuando a sua esquerda, ocupando
+.menu-departamento {
+    clear: left;
+    /* Garante que a classe (.menu-departamento) não terá nenhum elemento flutuando a sua esquerda, ocupando
     o espaço abaixo logo em seguida a classe (.buscar), que também está flutuando. A propriedade "clear" só funciona
     junto a elementos que estão flutuando em relação a outro elemento flutuante*/
-
-    margin-top: 10px; /* Esta margem cria um afastamento visível entre as tags <section class="busca"> e
+    margin-top: 10px;
+    /* Esta margem cria um afastamento visível entre as tags <section class="busca"> e
     <section class="menu-departamento". Como ambas possui a mesma cor de fundo, aparentemente pertenciam a mesma classe,
     (O titulo <h2>BUSCAR</h2>, o campo de busca <input type="search"> e o titulo <h2>DEPARTAMENTOS</h2> estavam colados) */
-    padding-bottom: 10px; /* Esse avastamento permite visualizar a cor de fundo cinza (#333333) após o último ListIten
+    padding-bottom: 10px;
+    /* Esse avastamento permite visualizar a cor de fundo cinza (#333333) após o último ListIten
     (<li>) da Tag <section class="menu-departamento"><ul><li>...</li></ul></section>, que estava coberto pois todas as 
     <li> desta classe possuem "background-color: white" */
 }
 
-.busca h2, .busca form, .menu-departamento h2{
-    margin: 10px; /* Insere um espaço entre os "headings2 (h2)" das sections <section class="buscar"> e <section class="
+.busca h2,
+.busca form,
+.menu-departamento h2 {
+    margin: 10px;
+    /* Insere um espaço entre os "headings2 (h2)" das sections <section class="buscar"> e <section class="
     menu-departament" e seus respectivos conteúdos. */
     /* Seletores hierárquicos de classes podem ser enumerados em uma mesma configuração */
 }
 
 .menu-departamento li {
-    background-color: white; /* A configuração "background-color", nos seletores de classes ".busca, .menu-departamento{...}"
+    background-color: white;
+    /* A configuração "background-color", nos seletores de classes ".busca, .menu-departamento{...}"
     Coloca tanto a classe, como seus elementos filhos com fundo cinza. Como a lista de departamentos <li></li> possui uma cor 
     de fundo diferente do <h2>DEPARTAMENTOS</h2>, esta propriedade é setada apenas nos itens de lista desta classe  */
-    margin-bottom: 1px; /* Insere uma linha entre os itens do (.menu-departamento li), definindo sua espessura */
-    padding: 5px 10px; /* Adiciona um espaço vertical entre os itens de departamentos, e alinha os mesmos horizontalmente
+    margin-bottom: 1px;
+    /* Insere uma linha entre os itens do (.menu-departamento li), definindo sua espessura */
+    padding: 5px 10px;
+    /* Adiciona um espaço vertical entre os itens de departamentos, e alinha os mesmos horizontalmente
     com o <h2>DEPARTAMENTOS</h2> */
 }
 
-.menu-departamento a{
-    color: #333333; /* Coloca os links do (.menu-departamento a) em cinza padrão */
-    text-decoration: none; /* Remove os sublinhados dos links */
+.menu-departamento a {
+    color: #333333;
+    /* Coloca os links do (.menu-departamento a) em cinza padrão */
+    text-decoration: none;
+    /* Remove os sublinhados dos links */
 }
 
-.busca input[type=search]{
-    width: 170px; /* Diminui o tamanho do campo de entrada de dados do formulário buscar, para que o botão fique na mesma linha */
+.busca input[type=search] {
+    width: 170px;
+    /* Diminui o tamanho do campo de entrada de dados do formulário buscar, para que o botão fique na mesma linha */
 }
 
 .painel {
-    width: 445px; /* Cada painel terá 445px, sendo esta característica herdada pelos paneis
+    width: 445px;
+    /* Cada painel terá 445px, sendo esta característica herdada pelos paneis
     de novidades e dos mais vendidos*/
-    margin: 10px 0; /* Separa os paineis dos destaques e do rodapé
+    margin: 10px 0;
+    /* Separa os paineis dos destaques do header e do rodape */
     padding: 10px;
 }
 
-.painel li{
+.painel li {
     display: inline-block;
+    /*Permite deixar os ListItem dos painéis lado a lado (inline) e alinha-los (block)*/
     vertical-align: top;
-    width: 140px; /* Garante que o tamanho da imagem será do ListItem <li>, mesmo que o texto
+    width: 140px;
+    /* Garante que o tamanho da imagem será do ListItem <li>, mesmo que o texto
     ultrapasse o tamanho, quebrando o Layout */
-    
 }
 
-.painel a{
+.painel a {
     text-decoration: none;
+    /*Remove o subilinhado dos links*/
     color: #333333;
     text-align: center;
 }
 
-.novidades{
+.novidades {
+    /*(<section class="painel novidades">>)*/
     float: left;
+    /*Essa opção grante que os painéis (<section class="painel mais-vendidos">>)  e 
+    (<section class="painel novidades">) fiquem lado a lado*/
 }
 
-.mais-vendidos{
+.mais-vendidos {
+    /*(<section class="painel mais-vendidos">>)*/
     float: right;
+    /*Essa opção grante que os painéis (<section class="painel mais-vendidos">>)  e 
+    (<section class="painel novidades">) fiquem lado a lado*/
+}
+
+footer {
+    background-image: url(../img/fundo-rodape.png);
+    clear: both;
+    /* O clear garante que a tag "footer" não flutue atrás dos paineis
+    (<section class="painel mais-vendidos">>) e (<section class="painel novidades">) simultaneamente*/
+    padding: 20px 0;
+    /*Adiciona espaço para o ícone Mirror Fashion aparecer completamente*/
+}
+
+footer .container {
+    position: relative;
+}
+
+.social {
+    position: absolute;
+    right: 0;
+    top: 12px;
+}
+
+.social a {
+    right: 32px;
+    /*Configura o tamanho dos ícones das redes sociais*/
+    bottom: 32px;
+    display: block;
+    /*Icones com "display: block;" para configurar o tamanho da imagem*/
+    text-indent: 1px;
+    /*Coloca as legendas dos ícones: Facebook, Google e Twitter fora da tela. 
+    Com identação com valor negativo. OBS: Este "macete" não funciona nas versões 
+    mais atuais dos navegadores.*/
+    background-repeat: no-repeat;
+}
+
+.social li {
+    float: left;
+    margin-left: 12px;
 }
 
 
+/*
+.social a[href*="facebook"] {
+    background-image: url(../img/facebook.png);
+}
 
+.social a[href*="google"] {
+    background-image: url(../img/googleplus.png);
+}
 
+.social a[href*="twitter"] {
+    background-image: url(../img/twitter.png);
+}*/
